@@ -15,6 +15,7 @@ BASE_URL_V2 = "https://api.gemini.com/v2"
 LOGGER = logging.getLogger()
 SYMBOLS_LIST = []
 
+
 def cast_list(func, data): 
     """ Cast list
 
@@ -167,6 +168,7 @@ def price_deviation(current_price, day_changes):
     LOGGER.debug(f"Func: price_deviation: Deviation was not greater than stdev")
     return False, round(average, 2), round(change, 2), percent
 
+
 def gather_ticker_data(symbol) -> json:
     """ Call and get ticker information from the Ticker V2 implementation
     
@@ -212,7 +214,6 @@ def send_alert(deviated, average, change, percent, symbol, current_price):
     return json.dumps(alert, indent=4)
     
 
-
 def api_alerts(symbol) -> None:
     """ Function that determines if a symbol has gone over a single deviation of change from the average
 
@@ -246,6 +247,7 @@ def api_alerts(symbol) -> None:
     # set alert if needed
     #if deviated:
     print(send_alert(deviated, average, change, percent, symbol, data["close"]))
+
 
 def set_logger(level=logging.INFO, logfile="logfile.log"):
     """ Set the parameters for the logging of the application
