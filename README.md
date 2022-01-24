@@ -1,9 +1,41 @@
-total time 4 hours
-Start time at 11:00pm
-Break at 12am
-Started again at 12:26am
-ended at 3:32am
+# Introduction
 
-Version Python 3.8.10
+This repo is my submission for teh Gemini take home coding challenge.
 
-TODO Readme and final analysis
+## Problem Statement
+Price Deviation - Generate an alert if the current price is more than one standard deviation from the 24hr average
+
+## Time Taken
+Total time:   4 hours
+Start time:   11:00pm 1/22/22
+Break time:   12:00am 1/23/22
+Break end:    12:26am 1/23/22
+Finish time:  03:32am 1/23/22
+
+# Installation
+
+## Python Version
+Python Version 3.8.10
+
+## Pip Installation
+pip install -r requirements.txt
+
+## Python run command
+python3 -m alerts 
+
+## Options
+-h Help Menu
+-d Set debug mode for debug output
+-s <Symbol> Sets the symbol to search search for alerts
+
+# TODO
+## Improvements
+- Expand tests in pytest
+- Fix symbol check to be more encompassing of different errors
+- Review functions and streamline them to be maintainable
+- Review functions and reduce globals usage
+- Better logging and log levels
+
+## Feature Enhancements
+- If symbol are not provided then search all symbols
+- Allow ability to set number of stdev to alert on, not just 1 stdev
